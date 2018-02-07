@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    int scoreTeamA = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,7 +21,8 @@ public class MainActivity extends AppCompatActivity {
         btn_points3_A.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                displayFoTeamA(3);
+                scoreTeamA = scoreTeamA+3;
+                displayFoTeamA(scoreTeamA);
             }
         });
 
@@ -27,7 +30,8 @@ public class MainActivity extends AppCompatActivity {
         btn_points2_A.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                displayFoTeamA(2);
+                scoreTeamA = scoreTeamA+2;
+                displayFoTeamA(scoreTeamA);
             }
         });
 
@@ -35,7 +39,8 @@ public class MainActivity extends AppCompatActivity {
         btn_free_throw_A.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                displayFoTeamA(1);
+                scoreTeamA = scoreTeamA+1;
+                displayFoTeamA(scoreTeamA);
             }
         });
 
