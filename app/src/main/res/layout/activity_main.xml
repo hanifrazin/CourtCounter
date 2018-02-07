@@ -16,6 +16,7 @@
         android:padding="4dp"/>
 
     <TextView
+        android:id="@+id/tv_score_A"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="0"
@@ -23,18 +24,21 @@
         android:padding="4dp"/>
 
     <Button
+        android:id="@+id/btn_points3_A"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="+3 Points"
         android:layout_margin="8dp"/>
 
     <Button
+        android:id="@+id/btn_points2_A"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="+2 Points"
         android:layout_margin="8dp"/>
 
     <Button
+        android:id="@+id/btn_free_throw_A"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Free Throw"
