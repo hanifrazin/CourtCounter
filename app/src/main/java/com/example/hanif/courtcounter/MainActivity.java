@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        
         Button_Score_A();
         Button_Score_B();
         Button btn_reset = findViewById(R.id.btn_reset);
