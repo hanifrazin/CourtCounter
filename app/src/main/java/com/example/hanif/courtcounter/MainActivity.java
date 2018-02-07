@@ -20,6 +20,15 @@ public class MainActivity extends AppCompatActivity {
 
         Button_Score_A();
         Button_Score_B();
+        Button btn_reset = findViewById(R.id.btn_reset);
+        btn_reset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                scoreTeamA = scoreTeamB = 0;
+                displayScoreTeamA(scoreTeamA);
+                displayScoreTeamB(scoreTeamB);
+            }
+        });
     }
 
     private void Button_Score_B() {

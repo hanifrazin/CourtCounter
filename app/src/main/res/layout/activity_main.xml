@@ -1,99 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="horizontal"
-    tools:context="com.example.hanif.courtcounter.MainActivity">
+    android:layout_height="match_parent">
 
     <LinearLayout
-        android:layout_weight="1"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:context="com.example.hanif.courtcounter.MainActivity">
 
-        <TextView
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Team A"
-            android:gravity="center_horizontal"
-            android:padding="4dp"/>
+            android:layout_weight="1"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/tv_score_A"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="0"
-            android:gravity="center_horizontal"
-            android:padding="4dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="4dp"
+                android:textSize="16sp"
+                android:text="Team A" />
 
-        <Button
-            android:id="@+id/btn_points3_A"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="+3 Points"
-            android:layout_margin="8dp"/>
+            <TextView
+                android:id="@+id/tv_score_A"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:paddingBottom="24dp"
+                android:text="0"
+                android:textSize="56sp"/>
 
-        <Button
-            android:id="@+id/btn_points2_A"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="+2 Points"
-            android:layout_margin="8dp"/>
+            <Button
+                android:id="@+id/btn_points3_A"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="+3 Points" />
 
-        <Button
-            android:id="@+id/btn_free_throw_A"
-            android:layout_width="match_parent"
+            <Button
+                android:id="@+id/btn_points2_A"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="+2 Points" />
+
+            <Button
+                android:id="@+id/btn_free_throw_A"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="Free Throw" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Free Throw"
-            android:layout_margin="8dp"/>
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="4dp"
+                android:text="Team B"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_score_B"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:paddingBottom="24dp"
+                android:text="0"
+                android:textSize="56sp"/>
+
+            <Button
+                android:id="@+id/btn_points3_B"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="+3 Points" />
+
+            <Button
+                android:id="@+id/btn_points2_B"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="+2 Points" />
+
+            <Button
+                android:id="@+id/btn_free_throw_B"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="Free Throw" />
+
+        </LinearLayout>
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_weight="1"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+    <Button
+        android:id="@+id/btn_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        android:textAllCaps="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Team B"
-            android:gravity="center_horizontal"
-            android:padding="4dp"/>
-
-        <TextView
-            android:id="@+id/tv_score_B"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="0"
-            android:gravity="center_horizontal"
-            android:padding="4dp"/>
-
-        <Button
-            android:id="@+id/btn_points3_B"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="+3 Points"
-            android:layout_margin="8dp"/>
-
-        <Button
-            android:id="@+id/btn_points2_B"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="+2 Points"
-            android:layout_margin="8dp"/>
-
-        <Button
-            android:id="@+id/btn_free_throw_B"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Free Throw"
-            android:layout_margin="8dp"/>
-
-    </LinearLayout>
-
-</LinearLayout>
+</RelativeLayout>
