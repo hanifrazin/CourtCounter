@@ -11,18 +11,53 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     int scoreTeamA = 0;
+    int scoreTeamB = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Button_Score_A();
+        Button_Score_B();
+    }
+
+    private void Button_Score_B() {
+        Button btn_points3_B = findViewById(R.id.btn_points3_B);
+        btn_points3_B.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                scoreTeamB = scoreTeamB+3;
+                displayScoreTeamB(scoreTeamB);
+            }
+        });
+
+        Button btn_points2_B = findViewById(R.id.btn_points2_B);
+        btn_points2_B.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                scoreTeamB = scoreTeamB+2;
+                displayScoreTeamB(scoreTeamB);
+            }
+        });
+
+        Button btn_free_throw_B = findViewById(R.id.btn_free_throw_B);
+        btn_free_throw_B.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                scoreTeamB = scoreTeamB+1;
+                displayScoreTeamB(scoreTeamB);
+            }
+        });
+    }
+
+    private void Button_Score_A() {
         Button btn_points3_A = findViewById(R.id.btn_points3_A);
         btn_points3_A.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 scoreTeamA = scoreTeamA+3;
-                displayFoTeamA(scoreTeamA);
+                displayScoreTeamA(scoreTeamA);
             }
         });
 
@@ -31,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 scoreTeamA = scoreTeamA+2;
-                displayFoTeamA(scoreTeamA);
+                displayScoreTeamA(scoreTeamA);
             }
         });
 
@@ -40,10 +75,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 scoreTeamA = scoreTeamA+1;
-                displayFoTeamA(scoreTeamA);
+                displayScoreTeamA(scoreTeamA);
             }
         });
-
     }
 
     @Override
@@ -56,8 +90,13 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void displayFoTeamA(int score){
-        TextView scoreView = findViewById(R.id.tv_score_A);
-        scoreView.setText(String.valueOf(score));
+    public void displayScoreTeamA(int score){
+        TextView scoreViewA = findViewById(R.id.tv_score_A);
+        scoreViewA.setText(String.valueOf(score));
+    }
+
+    public void displayScoreTeamB(int score){
+        TextView scoreViewB = findViewById(R.id.tv_score_B);
+        scoreViewB.setText(String.valueOf(score));
     }
 }
